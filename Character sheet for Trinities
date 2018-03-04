@@ -1,0 +1,625 @@
+    Name
+<input type="text" name="attr_Name" />
+Profession
+<input type="text" name="attr_Profession" />
+
+<h5>Archetype </h5>         
+     <select name="attr_Archetype" class="Archetype">                
+          <option value="Gemini">Gemini</option>
+          <option value="Virgo">Virgo</option>
+          <option value="Sagittarius">Sagittarius</option>
+          <option value="Pisces">Pisces</option>
+          <option value="Aries">Aries</option>
+          <option value="Taurus">Taurus</option>
+          <option value="Libra">Libra</option>
+          <option value="Scorpio">Scorpio</option>
+          <option value="Leo">Leo</option>
+          <option value="Capricorn">Capricorn</option>
+          <option value="Cancer">Cancer</option>
+          <option value="Aquarius">Aquarius</option>
+      </select>
+  
+<h5>Ascendants</h5>
+     <select name="attr_Ascendant1" class="Ascendant1">                
+          <option value="Gemini">Gemini</option>
+          <option value="Virgo">Virgo</option>
+          <option value="Sagittarius">Sagittarius</option>
+          <option value="Pisces">Pisces</option>
+          <option value="Aries">Aries</option>
+          <option value="Taurus">Taurus</option>
+          <option value="Libra">Libra</option>
+          <option value="Scorpio">Scorpio</option>
+          <option value="Leo">Leo</option>
+          <option value="Capricorn">Capricorn</option>
+          <option value="Cancer">Cancer</option>
+          <option value="Aquarius">Aquarius</option>
+      </select>
+     <select name="attr_Ascendant2" class="Ascendant2">                
+          <option value="Gemini">Gemini</option>
+          <option value="Virgo">Virgo</option>
+          <option value="Sagittarius">Sagittarius</option>
+          <option value="Pisces">Pisces</option>
+          <option value="Aries">Aries</option>
+          <option value="Taurus">Taurus</option>
+          <option value="Libra">Libra</option>
+          <option value="Scorpio">Scorpio</option>
+          <option value="Leo">Leo</option>
+          <option value="Capricorn">Capricorn</option>
+          <option value="Cancer">Cancer</option>
+          <option value="Aquarius">Aquarius</option>
+      </select>
+<h5>Descendants</h5>
+     <select name="attr_Descendant1" class="Descendant1">                
+          <option value="Gemini">Gemini</option>
+          <option value="Virgo">Virgo</option>
+          <option value="Sagittarius">Sagittarius</option>
+          <option value="Pisces">Pisces</option>
+          <option value="Aries">Aries</option>
+          <option value="Taurus">Taurus</option>
+          <option value="Libra">Libra</option>
+          <option value="Scorpio">Scorpio</option>
+          <option value="Leo">Leo</option>
+          <option value="Capricorn">Capricorn</option>
+          <option value="Cancer">Cancer</option>
+          <option value="Aquarius">Aquarius</option>
+      </select>
+           <select name="attr_Descendant2" class="Descendant2">                
+          <option value="Gemini">Gemini</option>
+          <option value="Virgo">Virgo</option>
+          <option value="Sagittarius">Sagittarius</option>
+          <option value="Pisces">Pisces</option>
+          <option value="Aries">Aries</option>
+          <option value="Taurus">Taurus</option>
+          <option value="Libra">Libra</option>
+          <option value="Scorpio">Scorpio</option>
+          <option value="Leo">Leo</option>
+          <option value="Capricorn">Capricorn</option>
+          <option value="Cancer">Cancer</option>
+          <option value="Aquarius">Aquarius</option>
+      </select>
+           <select name="attr_Descendant3" class="Descendant3">                
+          <option value="Gemini">Gemini</option>
+          <option value="Virgo">Virgo</option>
+          <option value="Sagittarius">Sagittarius</option>
+          <option value="Pisces">Pisces</option>
+          <option value="Aries">Aries</option>
+          <option value="Taurus">Taurus</option>
+          <option value="Libra">Libra</option>
+          <option value="Scorpio">Scorpio</option>
+          <option value="Leo">Leo</option>
+          <option value="Capricorn">Capricorn</option>
+          <option value="Cancer">Cancer</option>
+          <option value="Aquarius">Aquarius</option>
+      </select>
+
+<h2>Skills</h2>  
+
+<div class='sheet-3colrow'>
+    <div class='sheet-col'>
+
+
+
+        <h3>Gemini</h3> 
+     <input type="number" name="attr_ArchetypeGemini"value="0" />
+         <h5>Art</h5>
+         <input type="number" name="attr_ArtBase"value="0" />
+        <input type="number" name="attr_Art" value="@{ArtBase}+@{ArchetypeGemini}" disabled="true" />
+
+   <button type='roll' value='&{template:default} {{name=Art}} {{Lumiere=[[1d12 + @{Art}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Art}  + ?{Difficulté|0}]]}}'
+name='roll_Art'></button>
+
+         <h5>Empathy</h5>
+         <input type="number" name="attr_EmpathyBase"value="0" />
+        <input type="number" name="attr_Empathy" value="@{EmpathyBase}+@{ArchetypeGemini}" disabled="true" />
+
+   <button type='roll' value='&{template:default} {{name=Empathy}} {{Lumiere=[[1d12 + @{Empathy}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Empathy}  + ?{Difficulté|0}]]}}'
+name='roll_Empathy'></button>
+    
+         <h5>Persuasion</h5>
+        <input type="number" name="attr_PersuasionBase" value="0"/>
+        <input type="number" name="attr_Persuasion" value="@{PersuasionBase}+@{ArchetypeGemini}" disabled="true" />
+    <button type='roll' value='&{template:default} {{name=Persuasion}} {{Lumiere=[[1d12 + @{Persuasion}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Persuasion}  + ?{Difficulté|0}]]}}'
+name='roll_Persuasion'></button>
+        
+          <h3>Virgo</h3> 
+    <input type="number" name="attr_ArchetypeVirgo" value="0"/>
+    
+         <h5>Clairvoyance</h5>
+        <input type="number" name="attr_ClairvoyanceBase" value="0" />
+        <input type="number" name="attr_Clairvoyance" value="@{ClairvoyanceBase}+@{ArchetypeVirgo}" disabled="true" />
+   <button type='roll' value='&{template:default} {{name=Clairvoyance}} {{Lumiere=[[1d12 + @{Clairvoyance}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Clairvoyance}  + ?{Difficulté|0}]]}}'
+name='roll_Clairvoyance'></button>
+
+                 <h5>Mastery</h5>
+        <input type="number" name="attr_MasteryBase" value="0"/>
+        <input type="number" name="attr_Mastery" value="@{MasteryBase}+@{ArchetypeVirgo}" disabled="true" />
+            <button type='roll' value='&{template:default} {{name=Mastery}} {{Lumiere=[[1d12 + @{Mastery}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Mastery}  + ?{Difficulté|0}]]}}'
+name='roll_Mastery'></button>
+
+               <h5>Meditation</h5>
+        <input type="number" name="attr_MeditationBase" value="0"/>
+        <input type="number" name="attr_Meditation" value="@{MeditationBase}+@{ArchetypeVirgo}" disabled="true" />
+             <button type='roll' value='&{template:default} {{name=Meditation}} {{Lumiere=[[1d12 + @{Meditation}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Meditation}  + ?{Difficulté|0}]]}}'
+name='roll_Meditation'></button>
+
+    <h3>Sagittarius</h3> 
+     <input type="number" name="attr_ArchetypeSagittarius" value="0"/>
+
+               <h5>Survival</h5>
+        <input type="number" name="attr_SurvivalBase" value="0"/>
+        <input type="number" name="attr_Survival" value="@{SurvivalBase}+@{ArchetypeSagittarius}" disabled="true" />
+       <button type='roll' value='&{template:default} {{name=Survival}} {{Lumiere=[[1d12 + @{Survival}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Survival}  + ?{Difficulté|0}]]}}'
+name='roll_ESurvival'></button>
+
+
+               <h5>Firearms</h5>
+        <input type="number" name="attr_FirearmsBase" value="0"/>
+        <input type="number" name="attr_Firearms" value="@{FirearmsBase}+@{ArchetypeSagittarius}" disabled="true" />
+      <button type='roll' value='&{template:default} {{name=Firearms}} {{Lumiere=[[1d12 + @{Firearms}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Firearms}  + ?{Difficulté|0}]]}}'
+name='roll_Firearms'></button>
+
+
+               <h5>Vigilance</h5>
+        <input type="number" name="attr_VigilanceBase" value="0"/>
+        <input type="number" name="attr_Vigilance" value="@{VigilanceBase}+@{ArchetypeSagittarius}" disabled="true" />
+     <button type='roll' value='&{template:default} {{name=Vigilance}} {{Lumiere=[[1d12 + @{Vigilance}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Vigilance}  + ?{Difficulté|0}]]}}'
+name='roll_Vigilance'></button>
+
+    <h3>Pisces</h3> 
+     <input type="number" name="attr_ArchetypePisces" value="0"/>
+
+
+
+               <h5>Erudition</h5>
+        <input type="number" name="attr_EruditionBase" value="0"/>
+        <input type="number" name="attr_Erudition" value="@{EruditionBase}+@{ArchetypePisces}" disabled="true" />
+       <button type='roll' value='&{template:default} {{name=Erudition}} {{Lumiere=[[1d12 + @{Erudition}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Erudition}  + ?{Difficulté|0}]]}}'
+name='roll_Erudition'></button>
+
+
+               <h5>Languages</h5>
+        <input type="number" name="attr_LanguagesBase" value="0"/>
+        <input type="number" name="attr_Languages" value="@{LanguagesBase}+@{ArchetypePisces}" disabled="true" />
+        <button type='roll' value='&{template:default} {{name=Languages}} {{Lumiere=[[1d12 + @{Languages}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Languages}  + ?{Difficulté|0}]]}}'
+name='roll_Languages'></button>
+
+
+               <h5>Science</h5>
+        <input type="number" name="attr_ScienceBase" value="0"/>
+        <input type="number" name="attr_Science" value="@{ScienceBase}+@{ArchetypePisces}" disabled="true" />
+           <button type='roll' value='&{template:default} {{name=Science}} {{Lumiere=[[1d12 + @{Science}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Science}  + ?{Difficulté|0}]]}}'
+name='roll_Science'></button>
+
+       </div>
+    <div class='sheet-col'>
+    <h3>Aries</h3> 
+     <input type="number" name="attr_ArchetypeAries" value="0"/>
+
+
+               <h5>Weaponry</h5>
+        <input type="number" name="attr_WeaponryBase" value="0"/>
+        <input type="number" name="attr_Weaponry" value="@{WeaponryBase}+@{ArchetypeAries}" disabled="true" />
+         <button type='roll' value='&{template:default} {{name=Weaponry}} {{Lumiere=[[1d12 + @{Weaponry}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Weaponry}  + ?{Difficulté|0}]]}}'
+name='roll_Weaponry'></button>
+
+               <h5>Brawl</h5>
+        <input type="number" name="attr_BrawlBase" value="0"/>
+        <input type="number" name="attr_Brawl" value="@{BrawlBase}+@{ArchetypeAries}" disabled="true" />
+           <button type='roll' value='&{template:default} {{name=Brawl}} {{Lumiere=[[1d12 + @{Brawl}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Brawl}  + ?{Difficulté|0}]]}}'
+name='roll_Brawl'></button>
+
+               <h5>Tactics</h5>
+        <input type="number" name="attr_TacticsBase" value="0"/>
+        <input type="number" name="attr_Tactics" value="@{TacticsBase}+@{ArchetypeAries}" disabled="true" />
+            <button type='roll' value='&{template:default} {{name=Tactics}} {{Lumiere=[[1d12 + @{Tactics}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Tactics}  + ?{Difficulté|0}]]}}'
+name='roll_Tactics'></button>
+
+    <h3>Taurus</h3> 
+     <input type="number" name="attr_ArchetypeTaurus" value="0"/>
+
+               <h5>Athleticism</h5>
+        <input type="number" name="attr_AthleticismBase" value="0"/>
+        <input type="number" name="attr_Athleticism" value="@{AthleticismBase}+@{ArchetypeTaurus}" disabled="true" />
+   <button type='roll' value='&{template:default} {{name=Athleticism}} {{Lumiere=[[1d12 + @{Athleticism}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Athleticism}  + ?{Difficulté|0}]]}}'
+name='roll_Athleticism'></button>
+
+
+               <h5>Endurance</h5>
+        <input type="number" name="attr_EnduranceBase" value="0"/>
+        <input type="number" name="attr_Endurance" value="@{EnduranceBase}+@{ArchetypeTaurus}" disabled="true" />
+      <button type='roll' value='&{template:default} {{name=Endurance}} {{Lumiere=[[1d12 + @{Endurance}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Endurance}  + ?{Difficulté|0}]]}}'
+name='roll_Endurance'></button>
+
+
+               <h5>Strength</h5>
+            <input type="number" name="attr_StrengthBase" value="0"/>
+            <input type="number" name="attr_Strength" value="@{StrengthBase}+@{ArchetypeTaurus}" disabled="true" />
+                  <button type='roll' value='&{template:default} {{name=Strength}} {{Lumiere=[[1d12 + @{Strength}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Strength}  + ?{Difficulté|0}]]}}'
+name='roll_Strength'></button>
+   
+
+
+    <h3>Libra</h3> 
+     <input type="number" name="attr_ArchetypeLibra"value="0" />
+
+
+               <h5>Documentation</h5>
+            <input type="number" name="attr_DocumentationBase" value="0"/>
+            <input type="number" name="attr_Documentation" value="@{DocumentationBase}+@{ArchetypeLibra}" disabled="true" />
+             <button type='roll' value='&{template:default} {{name=Documentation}} {{Lumiere=[[1d12 + @{Documentation}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Documentation}  + ?{Difficulté|0}]]}}'
+name='roll_Documentation'></button>
+
+
+               <h5>Search</h5>
+            <input type="number" name="attr_SearchBase" value="0"/>
+            <input type="number" name="attr_Search" value="@{SearchBase}+@{ArchetypeLibra}" disabled="true" />
+           <button type='roll' value='&{template:default} {{name=Search}} {{Lumiere=[[1d12 + @{Search}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Search}  + ?{Difficulté|0}]]}}'
+name='roll_Search'></button>
+
+               <h5>Intellect</h5>
+            <input type="number" name="attr_IntellectBase" value="0"/>
+            <input type="number" name="attr_Intellect" value="@{IntellectBase}+@{ArchetypeLibra}" disabled="true" />
+                 <button type='roll' value='&{template:default} {{name=Intellect}} {{Lumiere=[[1d12 + @{Intellect}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Intellect}  + ?{Difficulté|0}]]}}'
+name='roll_Intellect'></button>
+
+    <h3>Scorpio</h3> 
+     <input type="number" name="attr_ArchetypeScorpio"value="0" />
+
+               <h5>Stealth</h5>
+            <input type="number" name="attr_StealthBase" value="0"/>
+            <input type="number" name="attr_Stealth" value="@{StealthBase}+@{ArchetypeScorpio}" disabled="true" />
+                 <button type='roll' value='&{template:default} {{name=Stealth}} {{Lumiere=[[1d12 + @{Stealth}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Stealth}  + ?{Difficulté|0}]]}}'
+name='roll_Stealth'></button>
+
+
+               <h5>Intrusion</h5>
+            <input type="number" name="attr_IntrusionBase" value="0"/>
+            <input type="number" name="attr_Intrusion" value="@{IntrusionBase}+@{ArchetypeScorpio}" disabled="true" />
+      <button type='roll' value='&{template:default} {{name=Intrusion}} {{Lumiere=[[1d12 + @{Intrusion}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Intrusion}  + ?{Difficulté|0}]]}}'
+name='roll_Intrusion'></button>
+
+
+               <h5>Subterfuge</h5>
+            <input type="number" name="attr_SubterfugeBase" value="0"/>
+            <input type="number" name="attr_Subterfuge" value="@{SubterfugeBase}+@{ArchetypeScorpio}" disabled="true" />
+                 <button type='roll' value='&{template:default} {{name=Subterfuge}} {{Lumiere=[[1d12 + @{Subterfuge}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Subterfuge}  + ?{Difficulté|0}]]}}'
+name='roll_Subterfuge'></button>
+
+       </div>
+    <div class='sheet-col'>
+
+    <h3>Leo</h3> 
+     <input type="number" name="attr_ArchetypeLeo"value="0" />
+
+               <h5>Leadership</h5>
+            <input type="number" name="attr_LeadershipBase" value="0"/>
+            <input type="number" name="attr_Leadership" value="@{LeadershipBase}+@{ArchetypeLeo}" disabled="true" />
+      <button type='roll' value='&{template:default} {{name=Leadership}} {{Lumiere=[[1d12 + @{Leadership}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Leadership}  + ?{Difficulté|0}]]}}'
+name='roll_Leadership'></button>
+        
+               <h5>Strategy</h5>
+            <input type="number" name="attr_StrategyBase" value="0"/>
+            <input type="number" name="attr_Strategy" value="@{StrategyBase}+@{ArchetypeLeo}" disabled="true" />
+                    <button type='roll' value='&{template:default} {{name=Strategy}} {{Lumiere=[[1d12 + @{Strategy}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Strategy}  + ?{Difficulté|0}]]}}'
+name='roll_Strategy'></button>
+
+
+               <h5>Willpower</h5>
+            <input type="number" name="attr_WillpowerBase" value="0"/>
+            <input type="number" name="attr_Willpower" value="@{WillpowerBase}+@{ArchetypeLeo}" disabled="true" />
+             <button type='roll' value='&{template:default} {{name=Willpower}} {{Lumiere=[[1d12 + @{Willpower}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Willpower}  + ?{Difficulté|0}]]}}'
+name='roll_Willpower'></button>
+
+    <h3>Capricorn</h3> 
+     <input type="number" name="attr_ArchetypeCapricorn"value="0" />
+
+               <h5>Dodge</h5>
+            <input type="number" name="attr_DodgeBase" value="0"/>
+            <input type="number" name="attr_Dodge" value="@{DodgeBase}+@{ArchetypeCapricorn}" disabled="true" />
+                  <button type='roll' value='&{template:default} {{name=Dodge}} {{Lumiere=[[1d12 + @{Dodge}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Dodge}  + ?{Difficulté|0}]]}}'
+name='roll_Dodge'></button>
+
+
+               <h5>Reflexes</h5>
+            <input type="number" name="attr_ReflexesBase" value="0"/>
+            <input type="number" name="attr_Reflexes" value="@{ReflexesBase}+@{ArchetypeCapricorn}" disabled="true" />
+      <button type='roll' value='&{template:default} {{name=Reflexes}} {{Lumiere=[[1d12 + @{Reflexes}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Reflexes}  + ?{Difficulté|0}]]}}'
+name='roll_Reflexes'></button>
+
+              <h5> Drive</h5>
+            <input type="number" name="attr_DriveBase" value="0"/>
+            <input type="number" name="attr_Drive" value="@{DriveBase}+@{ArchetypeCapricorn}" disabled="true" />
+                  <button type='roll' value='&{template:default} {{name=Drive}} {{Lumiere=[[1d12 + @{Drive}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Drive}  + ?{Difficulté|0}]]}}'
+name='roll_Drive'></button>
+
+
+    <h3>Cancer</h3> 
+     <input type="number" name="attr_ArchetypeCancer"value="0" />
+
+               <h5>Crafts</h5>
+            <input type="number" name="attr_CraftsBase" value="0"/>
+            <input type="number" name="attr_Crafts" value="@{CraftsBase}+@{ArchetypeCancer}" disabled="true" />
+               <button type='roll' value='&{template:default} {{name=Crafts}} {{Lumiere=[[1d12 + @{Crafts}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Crafts}  + ?{Difficulté|0}]]}}'
+name='roll_Crafts'></button>
+
+
+               <h5>Medecine</h5>
+            <input type="number" name="attr_MedecineBase" value="0"/>
+            <input type="number" name="attr_Medecine" value="@{MedecineBase}+@{ArchetypeCancer}" disabled="true" />
+               <button type='roll' value='&{template:default} {{name=Medecine}} {{Lumiere=[[1d12 + @{Medecine}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Medecine}  + ?{Difficulté|0}]]}}'
+name='roll_Medecine'></button>
+
+               <h5>Technologies</h5>
+            <input type="number" name="attr_TechnologiesBase" value="0"/>
+            <input type="number" name="attr_Technologies" value="@{TechnologiesBase}+@{ArchetypeCancer}" disabled="true" />
+               <button type='roll' value='&{template:default} {{name=Technologies}} {{Lumiere=[[1d12 + @{Technologies}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Technologies}  + ?{Difficulté|0}]]}}'
+name='roll_Technologies'></button>
+
+   <h3>Aquarius</h3> 
+     <input type="number" name="attr_ArchetypeAquarius"value="0" />
+
+                <h5>Astrology  </h5>
+            <input type="number" name="attr_AstrologyBase" value="0"/>
+            <input type="number" name="attr_Astrology" value="@{AstrologyBase}+@{ArchetypeAquarius}" disabled="true" />
+                   <button type='roll' value='&{template:default} {{name=Astrology}} {{Lumiere=[[1d12 + @{Astrology}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Astrology}  + ?{Difficulté|0}]]}}'
+name='roll_Astrology'></button>
+
+               <h5>Secret History</h5>
+            <input type="number" name="attr_Secret HistoryBase" value="0"/>
+            <input type="number" name="attr_Secret History" value="@{Secret HistoryBase}+@{ArchetypeAquarius}" disabled="true" />
+               <button type='roll' value='&{template:default} {{name=Secret History}} {{Lumiere=[[1d12 + @{Secret History}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{Secret History}  + ?{Difficulté|0}]]}}'
+name='roll_Secret History'></button>
+
+
+              <h5> The 8</h5>
+            <input type="number" name="attr_The8Base" value="0"/>
+            <input type="number" name="attr_The8" value="@{The8Base}+@{ArchetypeAquarius}" disabled="true" />
+             <button type='roll' value='&{template:default} {{name=The 8}} {{Lumiere=[[1d12 + @{The8}  + ?{Difficulté|0}]]}} {{Ténèbre=[[1d12 + @{The8}  + ?{Difficulté|0}]]}}'
+name='roll_The8'></button>
+
+         </div>
+</div>
+
+        
+
+    <h3>Domains</h3>
+<fieldset class="repeating_Domains">            
+      <input type="text" name="attr_Domains" />  
+      <input type="text" name="attr_Domains2" />
+      <input type="text" name="attr_Domains3" />   
+
+</fieldset>
+
+  <h3>Lifelines</h3>
+<input type='checkbox' name='PV1' value='1' checked='true' />
+<input type='checkbox' name='PV2' value='1' checked='true' />
+<input type='checkbox' name='PV3' value='1' checked='true' />
+<input type='checkbox' name='PV4' value='1' checked='true' /> 
+<h7>. </h7>
+<input type='checkbox' name='PV5' value='1' checked='true' />
+<input type='checkbox' name='PV6' value='1' checked='true' />
+<input type='checkbox' name='PV7' value='1' checked='true' />
+<input type='checkbox' name='PV8' value='1' checked='true' /> 
+<h3>. </h3>
+<input type='checkbox' name='PV9' value='1' checked='true' />
+<input type='checkbox' name='PV10' value='1' checked='true' />
+<input type='checkbox' name='PV11' value='1' checked='true' />
+<input type='checkbox' name='PV12' value='1' checked='true' /> 
+<h7>. </h7>
+<input type='checkbox' name='PV13' value='1' checked='true' />
+<input type='checkbox' name='PV14' value='1' checked='true' />
+<input type='checkbox' name='PV15' value='1' checked='true' />
+<input type='checkbox' name='PV16' value='1' checked='true' /> 
+<h3>. </h3>
+<input type='checkbox' name='PV17' value='1' checked='true' />
+<input type='checkbox' name='PV18' value='1' checked='true' />
+<input type='checkbox' name='PV19' value='1' checked='true' /> 
+<input type='checkbox' name='PV20' value='1' checked='true' />
+<h7>. </h7>
+<input type='checkbox' name='PV21' value='1' checked='true' />
+<input type='checkbox' name='PV22' value='1' checked='true' />
+<input type='checkbox' name='PV23' value='1' checked='true' />
+<input type='checkbox' name='PV24' value='1' checked='true' /> 
+  <input type="number" name="attr_PV" value="@{PV1}+@{PV2}+@{PV3}+@{PV4}+@{PV5}+@{PV6}+@{PV7}+@{PV8}+@{PV9}+@{PV10}+@{PV11}+@{PV12}+@{PV13}+@{PV14}+@{PV15}+@{PV16}+@{PV17}+@{PV18}+@{PV19}+@{PV20}+@{PV21}+@{PV22}+@{PV23}+@{PV24}"  />
+  
+<div class='sheet-2colrow'>
+    <div class='sheet-col'>
+         <h3>Ressources </h3> 
+      <h4>Wealth </h4> 
+      Base
+   <input type="number" name="attr_Wealth" value="0"/>
+  Temporary Value
+   <input type="number" name="attr_TWealth" value="0"/>
+Length of the Reduction (months)
+<input type="number" name="attr_DWealth" value="0"/>
+
+         <h4>Network </h4> 
+         Base
+   <input type="number" name="attr_Network" value="0"/>
+  Temporary Value
+   <input type="number" name="attr_TNetwork" value="0"/>
+Length of the Reduction (months)
+<input type="number" name="attr_DReseau" value="0"/>
+         <h4>Influence </h4> 
+         Base
+   <input type="number" name="attr_Influence" value="0"/>
+  Temporary Value
+   <input type="number" name="attr_TInfluence" value="0"/>
+Length of the Reduction (months)
+<input type="number" name="attr_DInfluence" value="0"/>
+
+
+   
+       <h3>Experience </h3> 
+      <h4>Total XP </h4> 
+   <input type="number" name="attr_PX Totaux" value="0"/>
+         <h4>Spent XP </h4> 
+   <input type="number" name="attr_PX Dépensés" value="0"/>
+
+
+    </div>
+    <div class='sheet-col'>
+      <h4> Possessions</h4>
+   <fieldset class="repeating_Possessions"> 
+     <textarea name="attr_Possessions"></textarea>
+  </fieldset> 
+  
+
+
+     </div>
+</div>
+
+
+   
+  <div class='sheet-3colrow'>
+    <div class='sheet-col'>
+    <h3>Deva </h3>         
+     <select name="attr_Deva" class="Deva">                
+          <option value="Sénévérim">Sénévérim</option>
+          <option value="Bérékhim">Bérékin</option>
+          <option value="Kéroubim">Kéroubim</option>
+          <option value="Séférim">Séférim</option>
+      </select>
+      
+     Deva Karma
+        <input type="number" name="attr_Karma Deva" value="0"/>
+        Debts
+          <input type="number" name="attr_Debts Deva" value="0"/>
+        Credits
+        <input type="number" name="attr_Credits Deva" value="0"/>
+
+
+    </div>
+    <div class='sheet-col'>
+     <h3>  Adam Karma </h3> 
+      <input type="number" name="attr_Karma Adam" value="@{Karma Deva}-@{Karma Archon}" />
+
+    </div>
+    <div class='sheet-col'>
+        <h3>Archon </h3>         
+     <select name="attr_Archon" class="Archon">                
+          <option value="Adon">Adon</option>
+          <option value="Tehon">Tehon</option>
+          <option value="Houhalon">Houhalon</option>
+          <option value="Aramon">Aramon</option>
+      </select>
+         Archon Karma
+        <input type="number" name="attr_Karma Archon" value="0"/>
+        Debts
+          <input type="number" name="attr_Debts Archon" value="0"/>
+        Credits
+        <input type="number" name="attr_Credits Archon" value="0"/>
+    </div>
+</div>
+
+      
+
+      
+      <h3>Verses</h3>
+<fieldset class="repeating_Verses"> 
+
+<div class='sheet-2colrow'>
+    <div class='sheet-col'>
+     <h4>Name of the Verse of light:
+      <input type="text" name="attr_Name VerseL" /> </h4>
+     Text:
+      <input type="text" name="attr_Text VerseL" /></h5>
+        Duration
+          <input type="text" name="attr_Duration VerseL" />
+    Distance
+      <input type="text" name="attr_Distance VerseL" />
+     <h5> Area of Effect
+        <input type="text" name="attr_Aire VerseL" /> 
+        Cumulation
+          <input type="text" name="attr_Cumulation VerseL" />
+      Effect
+<textarea name="attr_Effect VerseL"></textarea>
+     
+
+    </div>
+    <div class='sheet-col'>
+            <h4>Name of the Verse of Darkness:
+      <input type="text" name="attr_Name VerseT" /> </h4>
+      Text
+        <input type="text" name="attr_Text VerseT" />
+        Duration
+          <input type="text" name="attr_Duration VerseT" />
+    Distance
+      <input type="text" name="attr_Distance VerseT" />
+     <h5>  Area of Effect
+        <input type="text" name="attr_Aire VerseT" /> 
+        Cumulation
+          <input type="text" name="attr_Cumulation VerseT" />
+           Effect
+<textarea name="attr_Effect VerseT"></textarea>
+    </div>
+    </div>
+           
+
+</fieldset>
+       <h3>Auras</h3>
+      <fieldset class="repeating_Auras"> 
+      Sign
+          <select name="attr_Signaura" class="Signaura">                
+          <option value="Gemini">Gemini</option>
+          <option value="Virgo">Virgo</option>
+          <option value="Sagittarius">Sagittarius</option>
+          <option value="Pisces">Pisces</option>
+          <option value="Aries">Aries</option>
+          <option value="Taurus">Taurus</option>
+          <option value="Libra">Libra</option>
+          <option value="Scorpio">Scorpio</option>
+          <option value="Leo">Leo</option>
+          <option value="Capricorn">Capricorn</option>
+          <option value="Cancer">Cancer</option>
+          <option value="Aquarius">Aquarius</option>
+      </select>
+        Effect
+ <textarea name="attr_EffectAu"></textarea>
+
+       Body
+       <input type='checkbox' name='attr_Corps' value='1' checked='true' />
+       Hand
+       <input type='checkbox' name='attr_Main' value='1' checked='true' />
+       Sword
+       <input type='checkbox' name='attr_Épée' value='1' checked='true' />
+       Eye
+       <input type='checkbox' name='attr_Oeil' value='1' checked='true' />
+        </fieldset>
+        
+         <h3>Assets</h3>
+         Description of the Sword
+           <input type="text" name="attr_Description" />
+         <h4> Known Assets</h4>
+      <fieldset class="repeating_Assets">
+        Name
+       <input type="text" name="attr_NameA" />
+      Effects
+ <textarea name="attr_EffectsA"></textarea>
+
+        Color
+       <input type="text" name="attr_CouleurA" />
+       </fieldset>
+       
+            
+         <h3>Other Powers</h3>
+        
+      <fieldset class="repeating_PouvoirsVA">
+        Name
+       <input type="text" name="attr_NamePVA" />
+      Effects
+     <textarea name="attr_EffectsPVA"></textarea>
+       </fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+
